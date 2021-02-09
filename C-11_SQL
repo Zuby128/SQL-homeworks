@@ -1,0 +1,14 @@
+--WARNING MY TABLES HAS NO 'S' SO IF YOU WANT TO MODIFY THEM YOUR COMPUTER JUST ADD 's' END OF THE TABLE NAMES--
+
+--1--SELECT InvoiceId, CustomerId, Total FROM Invoice ORDER BY InvoiceId ASC, Total DESC;
+--2--SELECT InvoiceId, CustomerId, Total FROM Invoice ORDER BY Total DESC, InvoiceId ASC;
+--3--result of the both querry above are the same, but have different priorities. first querry priority is invoiceId so sorted by InvoiceId, priority of second one is total dollar amount for each invoice from highest to lowest. 
+--4--SELECT * FROM Invoice WHERE Total >= 10 LIMIT 10;
+--5--SELECT * FROM Invoice WHERE Total < 10 LIMIT 5;
+--6--SELECT * FROM Track WHERE Name LIKE "B%s"
+--7--SELECT * FROM Invoice WHERE BillingCountry="USA" OR BillingCountry="Germany" OR BillingCountry="Norway" OR BillingCountry="Canada" AND InvoiceDate LIKE "%2010%";
+--8--SELECT AlbumId, COUNT(*) FROM Track GROUP BY AlbumId ORDER BY COUNT(*) DESC
+
+--9--SELECT AlbumId, Title FROM Album GROUP BY Title
+--10--SELECT Name, AlbumId,  FROM
+
