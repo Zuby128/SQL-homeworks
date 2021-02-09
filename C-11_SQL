@@ -8,7 +8,20 @@
 --6--SELECT * FROM Track WHERE Name LIKE "B%s"
 --7--SELECT * FROM Invoice WHERE BillingCountry="USA" OR BillingCountry="Germany" OR BillingCountry="Norway" OR BillingCountry="Canada" AND InvoiceDate LIKE "%2010%";
 --8--SELECT AlbumId, COUNT(*) FROM Track GROUP BY AlbumId ORDER BY COUNT(*) DESC
+--9--SELECT Album.AlbumId, Album.Title, Track.Name FROM Album INNER JOIN Track ON album.AlbumId=Track.AlbumId
+--10--
+--SELECT Track.AlbumId, Album.Title, Track.Name, Track.Milliseconds 
+--FROM Track INNER JOIN Album ON album.AlbumId=Track.AlbumId 
+--ORDER BY Track.Milliseconds DESC;
 
---9--SELECT AlbumId, Title FROM Album GROUP BY Title
---10--SELECT Name, AlbumId,  FROM
-
+--11--
+/*SELECT Album.AlbumId, Album.Title, Track.Milliseconds 
+FROM Album INNER JOIN Track ON album.AlbumId=Track.AlbumId 
+ORDER BY Track.Milliseconds DESC;
+*/
+--12--
+/*SELECT Album.Title, Track.Milliseconds 
+FROM Album INNER JOIN Track ON album.AlbumId=Track.AlbumId 
+WHERE Track.Milliseconds >= 420000
+ORDER BY Track.Milliseconds DESC;
+*/
