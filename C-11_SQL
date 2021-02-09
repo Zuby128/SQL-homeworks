@@ -22,6 +22,6 @@ ORDER BY Track.Milliseconds DESC;
 --12--
 /*SELECT Album.Title, Track.Milliseconds 
 FROM Album INNER JOIN Track ON album.AlbumId=Track.AlbumId 
-WHERE Track.Milliseconds >= 420000
+WHERE Track.Milliseconds > 420000
 ORDER BY Track.Milliseconds DESC;
 */
