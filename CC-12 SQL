@@ -35,4 +35,4 @@ VALUES (5, 5, 5, NULL, NULL, NULL)
 --8--UPDATE courseRegistrations SET endDate='2021-03-10' WHERE EmployeeId=1
 --8--UPDATE courseRegistrations SET endDate='2021-03-10' WHERE EmployeeId=2
 --9--ALTER TABLE course ADD passScore INTEGER DEFAULT 50
---10--
+--10--SELECT name as not_saled, TrackId FROM Track WHERE TrackId NOT IN (SELECT TrackId FROM InvoiceLine) --1519
