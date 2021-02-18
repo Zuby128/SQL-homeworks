@@ -1,0 +1,36 @@
+--1--SELECT TrackId, name, Milliseconds FROM Track WHERE Milliseconds > (SELECT AVG(Milliseconds) FROM Track)
+--2--SELECT CustomerId, FirstName, LastName FROM Customer WHERE (SELECT EmployeeId FROM Employee WHERE FirstName='Jane' OR FirstName='Margaret' AND LastName='Peacock' OR LastName='Park') 
+--3--SELECT cs.CustomerId, cs.FirstName, cs.LastName FROM Customer cs INNER JOIN Employee em ON cs.SupportRepId=em.EmployeeId WHERE cs.SupportRepId=3 OR cs.SupportRepId=4
+--4--CREATE TABLE course (courseId INTEGER NOT NULL, courseName TEXT NOT NULL, coursePrice DECIMAL, PRIMARY KEY(courseId))
+/*
+CREATE TABLE courseRegistrations (
+registrationId NOT NULL, 
+courseId INTEGER NOT NULL, 
+EmployeeId INTEGER NOT NULL, 
+startDate DATE,
+endDate DATE,
+score NUMERIC,
+PRIMARY KEY(registrationId),
+FOREIGN KEY(courseId) REFERENCES course (courseId),
+FOREIGN KEY(EmployeeId) REFERENCES Employee (EmployeeId)
+)
+*/
+--5--
+/*
+INSERT INTO course (courseId, courseName, coursePrice)
+VALUES (1, 'SQL', 240.5)
+VALUES (2, 'HTML', 240)
+VALUES (3, 'python', 230.5)
+VALUES (4, 'JAVA', 240)
+VALUES (5, 'JIRA', 240.5)
+
+INSERT INTO courseRegistrations (registrationId, courseId, EmployeeId, startDate, endDate, score)
+VALUES (5, 5, 5, NULL, NULL, NULL)
+*/
+--6--DELETE FROM courseRegistrations WHERE EmployeeId=5
+--7--UPDATE courseRegistrations SET startDate='2021-02-14' WHERE EmployeeId=1
+--7--UPDATE courseRegistrations SET startDate='2021-02-14' WHERE EmployeeId=2
+--8--UPDATE courseRegistrations SET endDate='2021-03-10' WHERE EmployeeId=1
+--8--UPDATE courseRegistrations SET endDate='2021-03-10' WHERE EmployeeId=2
+--9--ALTER TABLE course ADD passScore INTEGER DEFAULT 50
+--10--
