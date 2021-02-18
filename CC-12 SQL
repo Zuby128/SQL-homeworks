@@ -1,3 +1,5 @@
+--!!!WARNING!!! MY TABLES HAS NO 'S' SO IF YOU WANT TO MODIFY THEM YOUR COMPUTER JUST ADD 's' END OF THE TABLE NAMES--
+
 --1--SELECT TrackId, name, Milliseconds FROM Track WHERE Milliseconds > (SELECT AVG(Milliseconds) FROM Track)
 --2--SELECT CustomerId, FirstName, LastName FROM Customer WHERE (SELECT EmployeeId FROM Employee WHERE FirstName='Jane' OR FirstName='Margaret' AND LastName='Peacock' OR LastName='Park') 
 --3--SELECT cs.CustomerId, cs.FirstName, cs.LastName FROM Customer cs INNER JOIN Employee em ON cs.SupportRepId=em.EmployeeId WHERE cs.SupportRepId=3 OR cs.SupportRepId=4
