@@ -1,0 +1,75 @@
+Teamwork Document for SQL Fundamentals:
+
+SQL CC-12
+
+Learning Outcomes:
+
+At the end of this coding challenge you will be correctly able to;
+
+Use JOINS
+Use DDL and DML Commands
+Use Subqueries
+Please answer the following questions:
+
+Single-Row Subqueries:
+
+Write a query to find the tracks which have longer duration than the average. Your query should include TrackId, Name, Milliseconds.
+Multiple-Row Subqueries:
+
+Write a query that returns the customers whose sales representatives are Jane Peacock and Margaret Park. Your query should include CustomerID, First Name and Last Name of the customers.
+
+Write the same query above this time using JOIN and add columns employee’s first name and last name.
+
+DDL (CREATE, ALTER, DELETE) and DML (SELECT, INSERT, UPDATE, DELETE) Statements
+
+Create two tables inside the chinook database.
+First table will be used to track the available courses inside the organization.
+
+And the second table will be used to track employee’s registration status for each course (employees can be registered different courses on different times
+
+( You can think about logic as follows; there are courses like SQL, HTML and etc. with different ID’s and prices and employees can join different courses.
+
+There are start and end dates for each course and also the score that employees get.
+
+E.g. John registered for the SQL course, Jane registered for the HTML course etc.
+
+You can give NULL to dates and scores for now, just try to build the structure)
+
+Name of the table: courses
+
+Columns:
+
+CourseId (Primary Key)
+CourseName (Cannot be null)
+CoursePrice
+Name of the table: courseRegistrations
+
+Columns:
+
+RegistrationID PRIMARY KEY,
+CourseId NOT NULL,
+EmployeeId NOT NULL,
+StartDate DATE, can be NULL,
+EndDate DATE , can be NULL,
+Score int , can be NULL,
+(You should assign EmployeeId and CourseId as foreign keys so that you can join courseRegistrations table with courses and employees table)
+
+Insert at least 5 rows into the courses and courseRegistration tables.
+Be careful with the foreign keys (You can give NULL to dates and scores for now, just try to build the structure)
+
+Suddenly the last registered employee changed his mind and doesn’t want to participate in the course you inserted. So delete the last record from courseRegistration table
+
+The courses have started for the top 2 registered employees. Update the StartDate as you wish
+
+The courses have finished for the top 2 registered employees. Update the EndDate and the score as you wish
+
+Suddenly you realize you forgot to add PassScore for courses. Add it now to courses table, it can’t be NULL and give default value 50 for each course
+
+JOINS:
+
+There are 3503 tracks on the database.
+Some of these tracks have no selling record which means they haven’t been sold even one time.
+
+Find these tracks (You should get 1519 distinct tracks).
+
+And also find the tracks that have been sold one or more times.(You should get 1984 distinct tracks)
